@@ -33,6 +33,6 @@ class Crud
 
     public function read()
     {
-        var_dump($this->getData());
+        return $this->getData();
     }
 }

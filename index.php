@@ -3,7 +3,7 @@
 require_once ('Connector/Crud.php');
 
 $db = new Crud();
-$db->read();
+$data = $db->read();
 
 ?>
 <!DOCTYPE html>
@@ -19,7 +19,22 @@ $db->read();
     </div>
     <div class="content">
         <p>Content will go here</p>
-
+        <table>
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>SlackId</th>
+            </tr>
+            <?php foreach ($data as $user): ?>
+                <?php foreach ($user as $t): ?>
+                    <tr>
+                        <td><?php echo $t['firstname'] ?></td>
+                        <td><?php echo $t['lastname'] ?></td>
+                        <td><?php echo $t['slack'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            <?php endforeach; ?>
+        </table>
     </div>
 </body>
 </html>
