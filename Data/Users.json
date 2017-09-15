@@ -1,0 +1,8 @@
+{
+  "users": [
+    {"firstname": "test", "lastname": "test", "slack" : "slackId"},
+    {"firstname": "test1", "lastname": "test1", "slack" : "slackId1"},
+    {"firstname": "test2", "lastname": "test2", "slack" : "slackId2"},
+    {"firstname": "test3", "lastname": "test3", "slack" : "slackId3"}
+  ]
+}
