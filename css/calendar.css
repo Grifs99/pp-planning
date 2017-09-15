@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css?family=Roboto');
+}
+@font-face {
+    font-family: Raleway;
+    src: url('https://fonts.googleapis.com/css?family=Raleway');
+}
+
+body, p, div {
+    font-family: 'Roboto', sans-serif, Helvetica;
+}
+
+body {
+    margin: 0;
+}
+
+.title {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif, Helvetica;
+    background-color: #3f5f95;
+    color: white;
+}
+
+.content {
+    margin-left: 20px;
+}
