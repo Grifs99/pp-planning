@@ -62,7 +62,7 @@ $sessionsData = $sessions->read();
         </div>
         <div class="addnew">
             <div class="section-title">Add a new session</div>
-            <form action="">
+            <form action="Form/FormReceiver.php" method="post">
                 <label for="slack_id1">Slack ID: </label><br>
                 <input type="text" name="slack_id1" placeholder="Enter slack id for person 1...">
                 <br><br>
@@ -70,7 +70,7 @@ $sessionsData = $sessions->read();
                 <input type="text" name="slack_id2" placeholder="Enter slack id for person 2...">
                 <br><br>
                 <label for="date">Date: </label><br>
-                <input type="date" name="slack_id2" placeholder="Enter date of planned session...">
+                <input type="date" name="date" placeholder="Enter date of planned session...">
                 <br><br>
                 <input type="submit" class="submit" value="Submit">
             </form>

@@ -8,7 +8,7 @@
  */
 class Crud
 {
-    CONST DATA_PATH = 'Data/Users.json';
+    public $db;
 
     public $data;
 
@@ -17,6 +17,7 @@ class Crud
         if(!file_exists($db)){
             echo 'File not found!';
         }
+        $this->db = $db;
         $string = file_get_contents($db);
         $this->setData(json_decode($string, true));
     }
@@ -34,5 +35,16 @@ class Crud
     public function read()
     {
         return $this->getData();
+    }
+
+    public function createSession($data)
+    {
+        $session = [];
+        $allSessions = $this->getData();
+        $session['userA'] = $data['slack_id1'];
+        $session['userB'] = $data['slack_id2'];
+        $session['date'] = $data['date'];
+        array_push($allSessions['sessions'],$session);
+        file_put_contents($this->db, json_encode($allSessions));
     }
 }
