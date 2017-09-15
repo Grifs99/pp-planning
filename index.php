@@ -72,7 +72,7 @@ $sessionsData = $sessions->read();
                 <label for="date">Date: </label><br>
                 <input type="date" name="slack_id2" placeholder="Enter date of planned session...">
                 <br><br>
-                <input type="submit" value="Submit">
+                <input type="submit" class="submit" value="Submit">
             </form>
         </div>
     </div>

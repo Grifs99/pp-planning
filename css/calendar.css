@@ -50,3 +50,31 @@ th {
     color: #2e456c;
     padding: 0 10px;
 }
+
+td {
+    padding: 0 10px;
+}
+
+label {
+    color: #2e456c;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.submit {
+    border: outset 3px #a2c3db;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f4faff;
+    font-weight: bold;
+    color: #2e456c;
+}
+.submit:active {
+    border: inset 3px #a2c3db;
+}
+.submit:hover {
+    background-color: #f9fcff;
+}
+.submit:focus {
+    outline: 0;
+}
