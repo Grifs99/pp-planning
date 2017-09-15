@@ -62,7 +62,18 @@ $sessionsData = $sessions->read();
         </div>
         <div class="addnew">
             <div class="section-title">Add a new session</div>
-
+            <form action="">
+                <label for="slack_id1">Slack ID: </label><br>
+                <input type="text" name="slack_id1" placeholder="Enter slack id for person 1...">
+                <br><br>
+                <label for="slack_id2">Slack ID: </label><br>
+                <input type="text" name="slack_id2" placeholder="Enter slack id for person 2...">
+                <br><br>
+                <label for="date">Date: </label><br>
+                <input type="date" name="slack_id2" placeholder="Enter date of planned session...">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
         </div>
     </div>
 </body>
