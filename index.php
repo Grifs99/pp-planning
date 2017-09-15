@@ -28,7 +28,7 @@ $sessionsData = $sessions->read();
             <table>
                 <tr>
                     <th>Name</th>
-                    <th>Slack id</th>
+                    <th>Slack ID</th>
                 </tr>
                 <?php foreach ($usersData as $users): ?>
                     <?php foreach ($users as $user): ?>
