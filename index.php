@@ -27,16 +27,13 @@ $sessionsData = $sessions->read();
             <div class="section-title">User list</div>
             <table>
                 <tr>
-                    <th>FirstName</th>
-                    <th>LastName</th>
-                    <th>SlackId</th>
+                    <th>Name</th>
+                    <th>Slack id</th>
                 </tr>
                 <?php foreach ($usersData as $users): ?>
                     <?php foreach ($users as $user): ?>
-
                         <tr>
-                            <td><?php echo $user['firstname'] ?></td>
-                            <td><?php echo $user['lastname'] ?></td>
+                            <td><?php echo $user['firstname'].' '.$user['lastname'] ?></td>
                             <td><?php echo $user['slack'] ?></td>
                         </tr>
                     <?php endforeach; ?>
@@ -47,8 +44,8 @@ $sessionsData = $sessions->read();
             <div class="section-title">PP Sessions</div>
             <table>
                 <tr>
-                    <th>UserA</th>
-                    <th>UserB</th>
+                    <th>User A</th>
+                    <th>User B</th>
                     <th>Date</th>
                 </tr>
                 <?php foreach ($sessionsData as $sessions): ?>
