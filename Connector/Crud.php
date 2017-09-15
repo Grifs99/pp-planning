@@ -12,12 +12,12 @@ class Crud
 
     public $data;
 
-    function __construct($db = self::DATA_PATH)
+    function __construct($db)
     {
         if(!file_exists($db)){
-            return 'File not found!';
+            echo 'File not found!';
         }
-        $string = file_get_contents("Data/Users.json");
+        $string = file_get_contents($db);
         $this->setData(json_decode($string, true));
     }
 

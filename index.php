@@ -2,8 +2,11 @@
 
 require_once ('Connector/Crud.php');
 
-$db = new Crud();
-$data = $db->read();
+$users = new Crud('Data/Users.json');
+$usersData = $users->read();
+
+$sessions = new Crud('Data/Planner.json');
+$sessionsData = $sessions->read();
 
 ?>
 <!DOCTYPE html>
@@ -28,12 +31,13 @@ $data = $db->read();
                     <th>LastName</th>
                     <th>SlackId</th>
                 </tr>
-                <?php foreach ($data as $user): ?>
-                    <?php foreach ($user as $t): ?>
+                <?php foreach ($usersData as $users): ?>
+                    <?php foreach ($users as $user): ?>
+
                         <tr>
-                            <td><?php echo $t['firstname'] ?></td>
-                            <td><?php echo $t['lastname'] ?></td>
-                            <td><?php echo $t['slack'] ?></td>
+                            <td><?php echo $user['firstname'] ?></td>
+                            <td><?php echo $user['lastname'] ?></td>
+                            <td><?php echo $user['slack'] ?></td>
                         </tr>
                     <?php endforeach; ?>
                 <?php endforeach; ?>
@@ -41,7 +45,23 @@ $data = $db->read();
         </div>
         <div class="sessions">
             <div class="section-title">PP Sessions</div>
+            <table>
+                <tr>
+                    <th>UserA</th>
+                    <th>UserB</th>
+                    <th>Date</th>
+                </tr>
+                <?php foreach ($sessionsData as $sessions): ?>
+                    <?php foreach ($sessions as $session): ?>
 
+                        <tr>
+                            <td><?php echo $session['userA'] ?></td>
+                            <td><?php echo $session['userB'] ?></td>
+                            <td><?php echo $session['date'] ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php endforeach; ?>
+            </table>
         </div>
         <div class="addnew">
             <div class="section-title">Add a new session</div>
