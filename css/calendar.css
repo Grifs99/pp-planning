@@ -45,3 +45,8 @@ body {
     color: #2e456c;
     font-weight: bold;
 }
+
+th {
+    color: #2e456c;
+    padding: 0 10px;
+}
