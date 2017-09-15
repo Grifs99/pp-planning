@@ -21,8 +21,27 @@ body {
     font-family: 'Raleway', sans-serif, Helvetica;
     background-color: #3f5f95;
     color: white;
+    text-align: center;
 }
 
 .content {
     margin-left: 20px;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content div {
+    margin: 10px 20px;
+}
+
+.section-title {
+    border: solid 2px #99B8CF;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    color: #2e456c;
+    font-weight: bold;
 }
